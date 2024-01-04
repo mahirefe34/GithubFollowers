@@ -26,9 +26,11 @@ class SearchVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
-    }
+            super.viewWillAppear(animated)
+            navigationController?.setNavigationBarHidden(true, animated: true)
+            
+            usernameTextField.text = ""
+        }
     
     func createDissmissKeayboardTapGesture() {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
