@@ -13,7 +13,7 @@ class FollowerCell: UICollectionViewCell {
 
     fileprivate let avatarImageView = GFAvatarImageView(frame: .zero)
 
-    fileprivate let usernameLabel = GFTitleLabel(textAlignment: .center, fontSize: 14)
+    fileprivate let usernameLabel = GFTitleLabel(textAlignment: .center)
 
     // MARK: - Properties
 
@@ -28,7 +28,7 @@ class FollowerCell: UICollectionViewCell {
         setupLayout()
     }
 
-    func configure(follower: Follower) {
+    func set(follower: Follower) {
         usernameLabel.text = follower.login
         //avatarImageView.downloadImage(from: follower.avatarUrl)
     }
